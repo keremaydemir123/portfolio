@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 
 import getFormattedDate from "@/lib/getFormattedDate";
 import { getBlogData, getSortedBlogsData } from "@/lib/posts";
@@ -48,7 +47,7 @@ async function BlogContent({ params }: BlogContentProps) {
   const formattedDate = getFormattedDate(date);
 
   return (
-    <div className="prose prose mx-auto">
+    <div className="prose mx-auto">
       <div className="my-4">
         <p className="text-base-content">{formattedDate}</p>
         <h1 className="text-primary font-bold">{title}</h1>

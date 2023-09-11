@@ -2,26 +2,295 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  --def: #96b7c4;
+  --inv: #fff;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 1.7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+main {
+  height: 100vh;
+  padding: 0 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-roboto-mono);
+  margin: 0 0 0.5rem 0;
+  color: rgb(var(--black));
+  line-height: 1.2;
+}
+h1 {
+  font-size: 3.052em;
+}
+h2 {
+  font-size: 2.441em;
+}
+h3 {
+  font-size: 1.953em;
+}
+h4 {
+  font-size: 1.563em;
+}
+h5 {
+  font-size: 1.25em;
+}
+strong,
+b {
+  font-weight: 700;
+}
+a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--accent);
+}
+p {
+  margin-bottom: 1em;
+}
+.prose p {
+  margin-bottom: 2em;
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 18px;
+  }
+  main {
+    padding: 1em;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(1px 1px 1px 1px);
+  /* maybe deprecated but we need to support legacy browsers */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* modern browsers, clip-path works inwards from each corner */
+  clip-path: inset(50%);
+  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+  white-space: nowrap;
+}
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-accent rounded-lg;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+}
+
+.slideIn {
+  transform: translateX(200%);
+  animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.slideIn .delay-50 {
+  animation-delay: 0.05s;
+}
+.slideIn .delay-100 {
+  animation-delay: 0.1s;
+}
+.slideIn .delay-200 {
+  animation-delay: 0.2s;
+}
+.slideIn .delay-300 {
+  animation-delay: 0.3s;
+}
+.slideIn .delay-500 {
+  animation-delay: 0.5s;
+}
+.slideIn .delay-800 {
+  animation-delay: 0.8s;
+}
+.slideIn .delay-1000 {
+  animation-delay: 1s;
+}
+.slideIn .delay-1300 {
+  animation-delay: 1.3s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.tech {
+  @apply text-accent hover:text-accent-focus italic underline underline-offset-4 cursor-pointer;
+}
+
+.box {
+  @apply mx-auto flex flex-col items-start mt-8 bg-base-200/30 p-4 rounded-md
+    shadow-md;
+}
+
+.md-link {
+  @apply text-secondary cursor-pointer
+   transition-all duration-75 ease-in-out;
+}
+.md-link:hover {
+  @apply -translate-y-1 text-primary-focus;
+}
+
+.md-link::after {
+}
+
+.card-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8;
+}
+
+.icon {
+  @apply w-6 w-6 rounded-full ring-1 ring-primary bg-primary;
+}
+
+.icon-wrapper {
+  @apply flex items-center gap-1 py-1 px-2 rounded-md w-max hover:bg-base-300;
+}
+
+.icon-wrapper > span {
+  @apply text-xs text-base-content;
+}
+
+.icon {
+  @apply w-6 h-6;
+}
+
+.tag {
+  @apply px-2 py-1 rounded-md  text-accent;
+}
+
+.project-line {
+  @apply flex text-base-content w-full justify-between items-center bg-base-200 px-2 py-1;
+  @apply rounded-md;
+}
+
+.project-kine:hover {
+  @apply bg-secondary/10 ring-1 ring-secondary/20;
+}
+
+.icon-wrapper {
+  @apply flex items-center gap-1 py-1 px-2 rounded-md w-max;
+}
+
+.project-line__icon {
+  @apply w-6 h-6;
+}
+
+.project-line__tag {
+  @apply text-accent;
+}
+
+.clickable {
+  @apply cursor-pointer transition-all duration-150 ease-in-out;
+}
+
+.clickable:hover {
+  @apply text-accent bg-base-200;
+}
+
+.avatar {
+  @apply w-full h-full rounded-full;
+  object-fit: cover;
+  object-position: center;
+}
+
+.navLink {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration-line: none !important;
+  @apply cursor-pointer flex justify-start py-3 text-base-content;
+}
+
+.navLink:hover {
+  @apply text-base-content bg-base-200 rounded-md px-4;
+}
+
+.sidebar__icon {
+  @apply h-12 w-12 cursor-pointer overflow-hidden;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar__icon:hover {
+  @apply scale-105 opacity-80;
+}
+
+.expand {
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expand:hover {
+  @apply scale-105;
+}
+
+.btnx {
+  --p: 200%;
+  background: linear-gradient(hsl(var(--a)) 0 0) var(--p, 0) / var(--p, 0)
+    no-repeat;
+  transition: 0.4s, background-position 0s;
+  @apply px-4 py-3 text-base-content/60 cursor-pointer;
+}
+.btnx:hover {
+  --p: 100%;
+  @apply px-8 text-accent-content;
+}
+
+.active {
+  @apply relative text-accent-content bg-accent px-8;
+}
+
+.active::before {
+  @apply absolute top-0 left-0 w-1 h-full bg-accent rounded-r-sm;
+  content: "";
+}
+
+.fancy-container {
+  text-align: center;
+  line-height: 1;
+}
+
+.fancy {
+  text-transform: uppercase;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-size: 110% auto;
+  background-position: center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.selection {
+  -webkit-text-fill-color: hsl(var(--p));
+  @apply text-primary;
 }

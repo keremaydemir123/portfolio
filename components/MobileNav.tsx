@@ -18,25 +18,29 @@ function MobileNav() {
       {navLinks.map((link, index) => {
         if (link.name === "Home")
           return (
-            <li
-              onClick={() => setSelected(link.name.toLowerCase())}
-              className={`btnx !px-2 ${selected === link.path ? "active" : ""}`}
-              key={index}
-            >
-              <Link href={link.path}>
+            <Link href={link.path} className="sm:text-sm text-sm w-max h-full">
+              <li
+                onClick={() => setSelected(link.name.toLowerCase())}
+                className={`btnx !px-2 h-full ${
+                  selected === link.path ? "active" : ""
+                }`}
+                key={index}
+              >
                 <HomeIcon />
-              </Link>
-            </li>
+              </li>
+            </Link>
           );
         return (
           <Link
             href={link.path}
             key={index}
-            className="sm:text-sm text-sm w-max"
+            className="sm:text-sm text-sm w-max h-full"
           >
             <li
               onClick={() => setSelected(link.name.toLowerCase())}
-              className={`btnx !px-2 ${selected === link.path ? "active" : ""}`}
+              className={`btnx !px-2 h-full ${
+                selected === link.path ? "active" : ""
+              }`}
             >
               {link.name}
             </li>

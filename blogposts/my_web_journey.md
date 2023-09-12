@@ -1,8 +1,8 @@
 ---
 title: My Web Development Journey
-date: 2019-12-31
+date: 2023-9-12
 image: /blog/blog-placeholder-1.jpg
-description: This blog summerize my web development journey from start to today
+description: This blog summarizes my web development journey from start to today
 tags: ["web development", "journey"]
 language: "en"
 ---

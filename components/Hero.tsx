@@ -8,14 +8,14 @@ import { heroLinks } from "@/constants/heroLinks";
 
 function Hero() {
   return (
-    <motion.div
-      variants={fastContainer}
-      initial="hidden"
-      animate="visible"
-      className="flex flex-col w-full prose"
-    >
+    <div className="flex flex-col w-full prose">
       <div className="z-1 text-base-content/60 flex flex-col">
-        <section className="text-lg">
+        <motion.section
+          className="text-lg"
+          variants={fastContainer}
+          initial="hidden"
+          animate="visible"
+        >
           <motion.h1
             variants={item}
             className="not-prose mb-4 text-base-content md:text-4xl sm:text-3xl text-2xl"
@@ -162,9 +162,9 @@ function Hero() {
               blog
             </Link>
           </motion.p>
-        </section>
+        </motion.section>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

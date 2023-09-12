@@ -7,7 +7,7 @@ function MainLayout({ children }: { children: React.ReactNode }) {
     <AppProvider>
       <main className="flex md:flex-row flex-col min-h-screen max-w-screen-xl mx-auto gap-4">
         <Sidebar />
-        <div className="relative overflow-hidden overflow-y-auto lg:pt-20 py-8 md:flex-[2] w-full h-full px-4 mx-auto">
+        <div className="relative overflow-hidden overflow-y-auto lg:pt-20 py-8 md:px-4 px-2 md:flex-[2] w-full h-full mx-auto">
           <Mobile />
           <div className="prose">{children}</div>
         </div>

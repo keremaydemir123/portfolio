@@ -32,13 +32,13 @@ function Hero() {
             a great decision. I&apos;ve been learning and making progress
             consistently, and I&apos;m really dedicated to it.
           </motion.p>
-          <motion.p variants={item} className="mt-8">
+          <motion.p variants={item} className="mt-8 whitespace-pre-line">
             I use powerful tools like {""}
             <a
               target="_blank"
               rel="noopener noreferrer"
               href={heroLinks.react.path}
-              className=" link"
+              className="link"
             >
               {heroLinks.react.name}
             </a>
@@ -47,7 +47,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               href={heroLinks.typescript.path}
-              className=" link"
+              className="link"
             >
               {heroLinks.typescript.name}
             </a>
@@ -56,7 +56,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               href={heroLinks.tailwind.path}
-              className=" link"
+              className="link"
             >
               {heroLinks.tailwind.name}
             </a>{" "}
@@ -66,7 +66,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               href={heroLinks.next.path}
-              className=" link"
+              className="link"
             >
               {heroLinks.next.name}
             </a>
@@ -75,7 +75,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               href={heroLinks.svelte.path}
-              className=" link"
+              className="link"
             >
               {heroLinks.svelte.name}
             </a>
@@ -84,7 +84,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               href={heroLinks.solid.path}
-              className=" link"
+              className="link"
             >
               {heroLinks.solid.name}
             </a>
@@ -93,7 +93,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               href={heroLinks.astro.path}
-              className=" link"
+              className="link"
             >
               {heroLinks.astro.name}
             </a>{" "}
@@ -102,7 +102,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               href={heroLinks.htmx.path}
-              className=" link"
+              className="link"
             >
               {heroLinks.htmx.name}
             </a>
@@ -114,7 +114,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.ogrencibaksana.com/"
-              className=" link"
+              className="link"
             >
               Öğrenci Baksana
             </a>{" "}
@@ -125,7 +125,7 @@ function Hero() {
             <a
               href={heroLinks.go.path}
               target="_blank"
-              className=" link"
+              className="link"
               rel="noopener noreferrer"
             >
               {heroLinks.go.name}
@@ -135,7 +135,7 @@ function Hero() {
               href={heroLinks.htmx.path}
               rel="noopener noreferrer"
               target="_blank"
-              className=" link"
+              className="link"
             >
               {heroLinks.htmx.name}
             </a>{" "}
@@ -144,7 +144,7 @@ function Hero() {
               href={heroLinks.mysql.path}
               rel="noopener noreferrer"
               target="_blank"
-              className=" link"
+              className="link"
             >
               {heroLinks.mysql.name}
             </a>

@@ -144,7 +144,18 @@ p {
 }
 
 .link {
-  @apply text-base-content/95 hover:text-slate-50 font-medium no-underline cursor-pointer;
+  @apply relative w-max whitespace-nowrap text-base-content/95 hover:text-base-content/80 font-medium no-underline cursor-pointer;
+}
+
+.link::before {
+  content: "";
+  transition: all ease-in-out 0.3s;
+
+  @apply absolute bottom-0 left-0 w-0 h-[2px] bg-accent rounded-md;
+}
+
+.link:hover {
+  @apply text-base-content gap-3 before:w-full;
 }
 
 .avatar {

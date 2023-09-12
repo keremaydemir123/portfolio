@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import getFormattedDate from "@/lib/getFormattedDate";
 import DocumentIcon from "./icons/DocumentIcon";
 import CalendarIcon from "./icons/CalendarIcon";
@@ -15,11 +14,11 @@ function BLogCard({ blog }: BLogCardProps) {
   return (
     <Link
       href={`/blogs/${id}`}
-      className="blog-card flex flex-col shadow-md shadow-black/5 p-4 w-full border border-solid border-base-content bg-base-100 hover:bg-secondary/5 hover:-translate-y-2 transition duration-300 ease-in-out"
+      className="blog-card flex flex-col text-base-content/60 p-4 w-full border border-solid border-base-content hover:bg-secondary/5 hover:-translate-y-2 transition duration-300 ease-in-out"
     >
       <div className="flex items-center justify-between">
         <DocumentIcon />
-        <div className="text-sm flex gap-1.5 items-center text-base-content/60">
+        <div className="text-sm flex gap-1.5 items-center ">
           <span>{formattedDate}</span>
           <CalendarIcon />
         </div>

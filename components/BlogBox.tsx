@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getSortedBlogsData } from "@/lib/posts";
 import BLogCard from "./BlogCard";
 
@@ -7,7 +6,7 @@ function BlogBox() {
 
   const firstTwoBlogs = blogs.slice(0, 2);
   return (
-    <div className="mx-auto prose prose-a:no-underline py-4">
+    <div className="  prose prose-a:no-underline py-4">
       <blockquote className="text-base-content">
         If you want to know more about me you can read my blog about my journey
       </blockquote>

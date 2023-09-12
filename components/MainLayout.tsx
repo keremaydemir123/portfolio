@@ -5,11 +5,11 @@ import AppProvider from "@/contexts/AppProvider";
 function MainLayout({ children }: { children: React.ReactNode }) {
   return (
     <AppProvider>
-      <main className="flex md:flex-row flex-col px-4 h-screen">
+      <main className="flex md:flex-row flex-col min-h-screen max-w-screen-xl mx-auto gap-4">
         <Sidebar />
-        <div className="relative md:flex-[8] w-full overflow-y-auto overflow-x-hidden h-full py-8 px-4">
+        <div className="relative overflow-hidden overflow-y-auto lg:pt-20 py-8 md:flex-[2] w-full h-full px-4 mx-auto">
           <Mobile />
-          {children}
+          <div className="prose">{children}</div>
         </div>
       </main>
     </AppProvider>

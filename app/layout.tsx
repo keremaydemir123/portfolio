@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { roboto_mono } from "@/app/fonts";
+import { inter } from "@/app/fonts";
 
 import AppProvider from "@/contexts/AppProvider";
 import MainLayout from "@/components/MainLayout";
@@ -20,7 +20,9 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
 
-      <body className={roboto_mono.className}>
+      <body
+        className={`${inter.className} bg-gradient-to-tr from-slate-900 to-slate-800`}
+      >
         <AppProvider>
           <MainLayout>{children}</MainLayout>
         </AppProvider>

@@ -14,14 +14,14 @@ function MobileNav() {
   }, [pathname]);
 
   return (
-    <ul className="z-10 not-prose !mx-0 !px-0 !list-none lg:hidden flex gap-1.5 justify-start items-center w-[calc(100%+0.5rem)] uppercase sticky -top-8 left-0 right-0 bg-base-100 -translate-x-1">
+    <ul className="z-10 not-prose !mx-0 !px-0 !list-none lg:hidden flex gap-1.5 justify-start items-center w-[calc(100%+0.5rem)] uppercase">
       {navLinks.map((link, index) => {
         if (link.name === "Home")
           return (
             <Link href={link.path} className="sm:text-sm text-sm w-max h-full">
               <li
                 onClick={() => setSelected(link.name.toLowerCase())}
-                className={`btnx !px-2 h-full ${
+                className={`mobile-nav h-full ${
                   selected === link.path ? "active" : ""
                 }`}
                 key={index}
@@ -38,7 +38,7 @@ function MobileNav() {
           >
             <li
               onClick={() => setSelected(link.name.toLowerCase())}
-              className={`btnx !px-2 h-full ${
+              className={`mobile-nav !px-2 h-full ${
                 selected === link.path ? "active" : ""
               }`}
             >

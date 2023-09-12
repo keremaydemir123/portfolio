@@ -8,15 +8,9 @@ function About() {
       initial="hidden"
       animate="visible"
       variants={fastContainer}
-      className=" prose mx-auto"
+      className="prose  "
     >
-      <motion.h1 variants={item} className="text-primary">
-        Passionate{" "}
-        <span className="underline underline-offset-2 decoration-accent">
-          Web Developer
-        </span>{" "}
-        with a Drive for Continuous Learning
-      </motion.h1>
+      <motion.h1 variants={item}>About</motion.h1>
       <motion.h2 variants={item} className="text-accent">
         Hello! I&apos;m Kerem Aydemir 👋🏻
       </motion.h2>{" "}

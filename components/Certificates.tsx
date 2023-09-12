@@ -3,7 +3,7 @@ import getFormattedDate from "@/lib/getFormattedDate";
 
 function Certificates() {
   return (
-    <div className="prose mx-auto mt-16 mb-8">
+    <div className="prose   mt-16 mb-8">
       <h2 className="text-accent">Certificates</h2>
       <div className="not-prose">
         {certificates.map((cert) => {

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import getFormattedDate from "@/lib/getFormattedDate";
 import { getBlogData, getSortedBlogsData } from "@/lib/posts";
+import CalendarIcon from "@/components/icons/CalendarIcon";
 
 interface BlogContentProps {
   params: {
@@ -42,19 +43,19 @@ async function BlogContent({ params }: BlogContentProps) {
     return notFound();
   }
 
-  const { title, date, contentHtml, image } = await getBlogData(blogId);
+  const { title, date, contentHtml } = await getBlogData(blogId);
 
   const formattedDate = getFormattedDate(date);
 
   return (
-    <div className="prose mx-auto">
-      <div className="my-4">
-        <p className="text-base-content">{formattedDate}</p>
-        <h1 className="text-primary font-bold">{title}</h1>
-      </div>
+    <div className="">
+      <p className="text-base-content/60 !m-0 flex items-center gap-1.5">
+        <CalendarIcon /> {formattedDate}
+      </p>
+      <h1 className="text-primary font-bold">{title}</h1>
       <div className="h-[2px] bg-base-200 my-4"></div>
       <article
-        className="mx-auto prose-code:text-accent prose-strong:text-accent prose-headings:text-accent prose-a:text-secondary"
+        className="text-base-content/60 prose-code:text-base-content prose-strong:text-base-content prose-headings:text-accent prose-a:text-secondary"
         dangerouslySetInnerHTML={{ __html: contentHtml }}
       />
     </div>

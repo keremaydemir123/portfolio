@@ -1,15 +1,15 @@
 import React from "react";
-import DownloadIcon from "../icons/DownloadIcon";
+import ArrowRight from "../icons/ArrowRight";
 
 function ResumeButton() {
   return (
     <a
-      className="btn btn-secondary btn-sm w-max text-secondary-content h-10 rounded-none no-underline"
+      className="w-max text-base font-medium mail-direct text-slate-300 hover:text-slate-100 rounded-none no-underline !m-0"
       href="resume.pdf"
       target="_blank"
     >
-      <DownloadIcon />
       Resume
+      <ArrowRight />
     </a>
   );
 }

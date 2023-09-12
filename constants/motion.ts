@@ -1,5 +1,3 @@
-import { MotionProps, MotionStyle } from "framer-motion";
-
 export const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {

@@ -2,6 +2,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { container } from "@/constants/motion";
+import PageHeading from "./PageHeading";
+import ArrowRight from "./icons/ArrowRight";
+import socialLinks from "@/constants/socialLinks";
 
 function ContactForm() {
   const [name, setName] = useState("");
@@ -9,8 +12,14 @@ function ContactForm() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  const [isValidEmail, setIsValidEmail] = useState(true);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!isValid()) {
+      setIsValidEmail(false);
+      return;
+    }
     await fetch("/api", {
       body: JSON.stringify({
         name: name,
@@ -37,20 +46,29 @@ function ContactForm() {
     return true;
   };
 
+  const inputClasses = "input input-ghost input-bordered w-full";
+
   return (
     <>
       <motion.div
         variants={container}
         initial="hidden"
         animate="visible"
-        className="prose mx-auto h-full flex flex-col justify-center items-center"
+        className="prose flex flex-col justify-center"
       >
-        <h1 className="w-full uppercase text-primary">
-          let&apos;s get in touch
-        </h1>
-        <div className="mt-8 z-1 w-full bg-base-200 p-4 text-base-content/80 mx-auto flex flex-col items-center h-max">
+        <PageHeading>Let&apos;s Connect</PageHeading>
+        <a
+          href={`mailto:${socialLinks.gmail}`}
+          className="mail-direct no-underline"
+        >
+          <span>Mail Directly</span> <ArrowRight />
+        </a>
+        <div className="z-1 w-full ring-1 ring-slate-300/20 rounded-md bg-slate-900/80 p-4 text-base-content/80   flex flex-col items-center h-max">
           <form className="flex flex-col w-full" onSubmit={handleSubmit}>
-            <label className="my-1" htmlFor="name">
+            <label
+              className="mb-1 mt-2 font-semibold text-base-content/90"
+              htmlFor="name"
+            >
               Name
             </label>
             <input
@@ -59,11 +77,14 @@ function ContactForm() {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="input w-full"
+              className={inputClasses}
               placeholder="Your name.."
             />
 
-            <label className="my-1" htmlFor="email">
+            <label
+              className="mb-1 mt-2 font-semibold text-base-content/90"
+              htmlFor="email"
+            >
               Email
             </label>
             <input
@@ -72,11 +93,14 @@ function ContactForm() {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="input w-full"
+              className={inputClasses}
               placeholder="Your email.."
             />
 
-            <label className="my-1" htmlFor="subject">
+            <label
+              className="mb-1 mt-2 font-semibold text-base-content/90"
+              htmlFor="subject"
+            >
               Subject
             </label>
             <input
@@ -85,11 +109,14 @@ function ContactForm() {
               name="subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              className="input w-full"
+              className={inputClasses}
               placeholder="Subject..."
             />
 
-            <label className="my-1" htmlFor="message">
+            <label
+              className="mb-1 mt-2 font-semibold text-base-content/90"
+              htmlFor="message"
+            >
               Message
             </label>
             <textarea
@@ -97,19 +124,20 @@ function ContactForm() {
               name="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="textarea w-full"
+              className="textarea textarea-ghost textarea-bordered w-full"
               placeholder="Write something.."
             />
 
-            <div className="flex justify-between items-start mt-4">
+            <div className="flex flex-col justify-between items-end mt-4">
               <div className="text-error not-prose">
-                {!isValid() && <span>Form is not valid!</span>}
+                {!isValidEmail && <span>Form is not valid!</span>}
               </div>
               <button
                 type="submit"
+                disabled={!isValid()}
                 className={`${
-                  isValid() ? "btn-primary" : "btn-disabled"
-                } btn btn-primary btn-block btn-md md:btn-wide uppercase rounded-none`}
+                  isValid() ? "btn-accent" : "btn-accent btn-outline"
+                } btn btn-block btn-md md:btn-wide uppercase rounded-sm`}
               >
                 Submit
               </button>

@@ -6,7 +6,7 @@ import technologies, {
 
 function Tecnologies() {
   return (
-    <div className="prose mx-auto mt-16 mb-8 py-4">
+    <div className="prose   mt-16 mb-8 py-4">
       <h2 className="text-accent flex items-start gap-2">
         Technologies that I am experienced with
       </h2>

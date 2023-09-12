@@ -12,18 +12,21 @@ function SidebarNav() {
     setSelected(pathname);
   }, [pathname]);
 
+  function handleNavClick() {
+    setSelected(pathname);
+    scrollTo(0, 0);
+  }
+
   return (
-    <ul className="mt-8 flex flex-col items-start w-full uppercase">
+    <ul className="mt-8 mb-4 flex flex-col gap-1 items-start w-full uppercase text-base font-light">
       {navLinks.map((link, index) => (
         <Link
           key={index}
           href={link.path}
           className={`btnx from-left ${selected === link.path ? "active" : ""}`}
-          onClick={() => setSelected(link.path)}
+          onClick={handleNavClick}
         >
-          <li className="md:text-base lg:text-lg tracking-wider">
-            {link.name}
-          </li>
+          <li className="tracking-wider">{link.name}</li>
         </Link>
       ))}
     </ul>

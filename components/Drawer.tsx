@@ -18,9 +18,9 @@ function Drawer({ project }: { project: Project }) {
 
           <h1 className="font-bold text-secondary mt-4">{project.title}</h1>
           <p className="!mb-4">{project.description}</p>
-          <div className="flex gap-4 items-center mt-4">
+          <div className="flex flex-wrap items-center mt-4">
             {project.tags.map((tag) => (
-              <span key={tag} className="text-accent text-base">
+              <span key={tag} className="text-accent text-base mr-2.5">
                 {tag}
               </span>
             ))}

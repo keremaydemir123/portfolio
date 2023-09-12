@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { fastContainer, item } from "@/constants/motion";
+import { heroLinks } from "@/constants/heroLinks";
 
 function Hero() {
   return (
@@ -15,7 +16,10 @@ function Hero() {
     >
       <div className="z-1 text-base-content/60 flex flex-col">
         <section className="text-lg">
-          <motion.h1 variants={item} className="mb-4 text-base-content">
+          <motion.h1
+            variants={item}
+            className="not-prose mb-4 text-base-content md:text-4xl sm:text-3xl text-2xl"
+          >
             I&apos;m a Web Developer based in Tekirdağ, Türkiye, specializing in{" "}
             {""}
             <strong className="text-accent">React</strong> and {""}
@@ -30,42 +34,131 @@ function Hero() {
           </motion.p>
           <motion.p variants={item} className="mt-8">
             I use powerful tools like {""}
-            <span className="tech">React</span>,{" "}
-            <span className="tech">TypeScript</span>, and{" "}
-            <span className="tech">Tailwind</span> to create awesome websites.
-            I&apos;m also interested in tools like {""}
-            <span className="tech">NextJS</span>,{" "}
-            <span className="tech">Swelte</span>,{" "}
-            <span className="tech">SolidJS</span>,{" "}
-            <span className="tech">Astro</span> and{" "}
-            <span className="tech">htmx</span>, to expand my skills.
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={heroLinks.react.path}
+              className=" link"
+            >
+              {heroLinks.react.name}
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={heroLinks.typescript.path}
+              className=" link"
+            >
+              {heroLinks.typescript.name}
+            </a>
+            , and{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={heroLinks.tailwind.path}
+              className=" link"
+            >
+              {heroLinks.tailwind.name}
+            </a>{" "}
+            to create awesome websites. I&apos;m also interested in tools like{" "}
+            {""}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={heroLinks.next.path}
+              className=" link"
+            >
+              {heroLinks.next.name}
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={heroLinks.svelte.path}
+              className=" link"
+            >
+              {heroLinks.svelte.name}
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={heroLinks.solid.path}
+              className=" link"
+            >
+              {heroLinks.solid.name}
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={heroLinks.astro.path}
+              className=" link"
+            >
+              {heroLinks.astro.name}
+            </a>{" "}
+            and{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={heroLinks.htmx.path}
+              className=" link"
+            >
+              {heroLinks.htmx.name}
+            </a>
+            , to expand my skills.
           </motion.p>
           <motion.p variants={item} className="mb-4">
             Right now, I&apos;m actively involved in the{" "}
             <a
-              href="https://www.ogrencibaksana.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="tech"
+              href="https://www.ogrencibaksana.com/"
+              className=" link"
             >
               Öğrenci Baksana
             </a>{" "}
             community on a voluntary basis.
           </motion.p>
           <motion.p variants={item} className="">
-            I&apos;m currently learning <strong className="tech">Go</strong>,{" "}
-            <strong className="tech">htmx</strong> and{" "}
-            <strong className="tech">SQL</strong>.
+            I&apos;m currently learning{" "}
+            <a
+              href={heroLinks.go.path}
+              target="_blank"
+              className=" link"
+              rel="noopener noreferrer"
+            >
+              {heroLinks.go.name}
+            </a>
+            ,{" "}
+            <a
+              href={heroLinks.htmx.path}
+              rel="noopener noreferrer"
+              target="_blank"
+              className=" link"
+            >
+              {heroLinks.htmx.name}
+            </a>{" "}
+            and{" "}
+            <a
+              href={heroLinks.mysql.path}
+              rel="noopener noreferrer"
+              target="_blank"
+              className=" link"
+            >
+              {heroLinks.mysql.name}
+            </a>
+            .
           </motion.p>
           <motion.p variants={item}>
             Feel free to explore my projects and don&apos;t hesitate to{" "}
-            <Link href="/contact" className="tech">
+            <Link href="/contact" className=" link">
               get in touch
             </Link>
           </motion.p>
           <motion.p variants={item}>
             If you want to learn more about my journey, you can check out my{" "}
-            <Link href="/blogs/my_web_journey__en" className="tech">
+            <Link href="/blogs/my_web_journey" className=" link">
               blog
             </Link>
           </motion.p>

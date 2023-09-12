@@ -14,7 +14,7 @@ function MobileNav() {
   }, [pathname]);
 
   return (
-    <ul className="z-10 not-prose !mx-0 !px-0 !list-none lg:hidden flex gap-1.5 justify-start items-center w-[calc(100%+0.5rem)] uppercase">
+    <ul className="z-10 not-prose !mx-0 !px-0 !list-none lg:hidden flex gap-2.5 justify-start items-center w-[calc(100%+0.5rem)] uppercase">
       {navLinks.map((link, index) => {
         if (link.name === "Home")
           return (
@@ -38,7 +38,7 @@ function MobileNav() {
           >
             <li
               onClick={() => setSelected(link.name.toLowerCase())}
-              className={`mobile-nav !px-2 h-full ${
+              className={`mobile-nav h-full ${
                 selected === link.path ? "active" : ""
               }`}
             >

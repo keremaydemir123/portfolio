@@ -143,8 +143,8 @@ p {
   }
 }
 
-.tech {
-  @apply text-base-content hover:text-base-content/90 font-medium no-underline cursor-pointer;
+.link {
+  @apply text-base-content/95 hover:text-slate-50 font-medium no-underline cursor-pointer;
 }
 
 .avatar {

@@ -51,7 +51,7 @@ function ProjectCard({ project }: { project: Project }) {
         <motion.label
           whileHover={{ paddingLeft: 2 }}
           whileTap={{ scale: 0.9 }}
-          className="tech w-max"
+          className="link w-max"
           htmlFor={project.id}
           onClick={() => setIsHovered(false)}
         >

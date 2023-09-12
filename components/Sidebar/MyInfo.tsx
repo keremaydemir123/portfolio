@@ -10,7 +10,7 @@ function MyInfo({ mobile }: { mobile?: boolean }) {
       <>
         <div className="w-full flex-1 flex flex-col gap-2.5">
           <div className="flex flex-col gap-2.5">
-            <h5 className="text-start text-xl mb-0 font-bold text-base-content">
+            <h5 className="text-start text-2xl mb-0 font-bold text-base-content">
               Kerem Aydemir
             </h5>
             <h2 className="text-start text-lg font-medium text-base-content/90 !m-0">
@@ -18,7 +18,7 @@ function MyInfo({ mobile }: { mobile?: boolean }) {
               <span className="font-light"> at Öğrenci Baksana</span>
             </h2>
           </div>
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-end gap-2.5">
             <SocialIcons className="flex-1" mobile />
             <ResumeButton />
           </div>

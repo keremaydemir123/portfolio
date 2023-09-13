@@ -7,7 +7,7 @@ import ResumeButton from "./ResumeButton";
 
 function Sidebar() {
   return (
-    <aside className="lg:block overflow-y-auto hidden relative flex-[1] h-full px-16 py-20">
+    <aside className="sticky top-0 lg:block overflow-y-auto hidden flex-[1] h-screen px-16 py-20">
       <nav className="text-start flex flex-col items-start h-full">
         <div className="flex items-start justify-between gap-2 slideIn w-full">
           <MyInfo />

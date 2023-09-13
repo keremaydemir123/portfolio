@@ -39,7 +39,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${inter.className} bg-gradient-to-tr from-slate-900 to-slate-800`}
+        className={`${inter.className} bg-gradient-to-tr from-slate-900 to-slate-800 overflow-y-auto min-h-max`}
       >
         <AppProvider>
           <MainLayout>{children}</MainLayout>

@@ -8,7 +8,7 @@ function PageHeading({ children }: { children: React.ReactNode }) {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="not-prose text-3xl font-bold mb-6 text-base-content"
+      className="not-prose md:text-3xl text-2xl font-bold mb-6 text-base-content"
     >
       <motion.span variants={item}>{children}</motion.span>
     </motion.h2>

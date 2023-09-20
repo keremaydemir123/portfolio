@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import { inter } from "@/app/fonts";
+import { Analytics } from "@vercel/analytics/react";
 
 import AppProvider from "@/contexts/AppProvider";
 import MainLayout from "@/components/MainLayout";
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-gradient-to-tr from-slate-900 to-slate-800 overflow-y-auto min-h-max`}
       >
+        <Analytics />
         <AppProvider>
           <MainLayout>{children}</MainLayout>
         </AppProvider>

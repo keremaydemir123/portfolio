@@ -67,7 +67,7 @@ I had immersed myself in this process. I was constantly planning what to do next
 
   
 
-***The calendar showed August 1, 2020.*** It was the first day of a long journey where I would systematically learn frontend development. I started working eagerly. I stuck to the plan and worked almost every day for about ***6-8 hours.***
+***The calendar showed August 1, 2022.*** It was the first day of a long journey where I would systematically learn frontend development. I started working eagerly. I stuck to the plan and worked almost every day for about ***6-8 hours.***
 
   
 

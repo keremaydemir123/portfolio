@@ -22,16 +22,6 @@ const projects: Project[] = [
     live: "https://cofixgpt.vercel.app/",
   },
   {
-    id: "3",
-    title: "starhips",
-    image: "/projects/starships/frame_starships.png",
-    description:
-      "This project was created as part of the FMSS React Practicum. The goal of this project is to use React, axios, and react-router to create an application that lists Star Wars starships and allows users to search and view details about each ship.",
-    tags: ["React", "Tailwind", "ContextAPI"],
-    github: "https://github.com/keremaydemir123/fmss-practicum-final",
-    live: "https://fmss-practicum-final.vercel.app/",
-  },
-  {
     id: "4",
     title: "rubigtech",
     image: "/projects/rubig/frame_rubig.png",
@@ -40,6 +30,25 @@ const projects: Project[] = [
     tags: ["Nextjs", "Tailwind"],
     github: undefined,
     live: "https://rubigtech.com/",
+  },
+  {
+    id: "5",
+    title: "Portfolio",
+    image: "/projects/portfolio/portfolio.png",
+    description: `The portfolio website you're exploring`,
+    tags: ["Nextjs", "Framer Motion", "DaisyUI"],
+    github: "https://github.com/keremaydemir123/portfolio",
+    live: "https://keremaydemir.vercel.app/",
+  },
+  {
+    id: "3",
+    title: "starhips",
+    image: "/projects/starships/frame_starships.png",
+    description:
+      "This project was created as part of the FMSS React Practicum. The goal of this project is to use React, axios, and react-router to create an application that lists Star Wars starships and allows users to search and view details about each ship.",
+    tags: ["React", "Tailwind", "ContextAPI"],
+    github: "https://github.com/keremaydemir123/fmss-practicum-final",
+    live: "https://fmss-practicum-final.vercel.app/",
   },
 ];
 

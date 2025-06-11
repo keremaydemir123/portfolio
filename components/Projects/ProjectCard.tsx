@@ -17,7 +17,7 @@ function ProjectCard({ project }: { project: Project }) {
         onMouseLeave={() => setIsHovered(false)}
         className={`${
           isHovered && "hover:bg-secondary/5 hover:-translate-y-2"
-        } p-4 ring-1 flex flex-col ring-base-content/50 text-base-content/60 transition-all duration-150 ease-in-out`}
+        } p-4 ring-1 flex flex-col ring-base-content/50 text-base-content/60 transition-all duration-150 ease-in-out aspect-square`}
       >
         <div className="flex items-center justify-between">
           <ProjectIcon />

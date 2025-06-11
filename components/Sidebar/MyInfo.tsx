@@ -14,8 +14,8 @@ function MyInfo({ mobile }: { mobile?: boolean }) {
               Kerem Aydemir
             </h5>
             <h2 className="text-start text-lg font-medium text-base-content/90 !m-0">
-              <span className="text-slate-300">Frontend Developer</span>
-              <span className="font-light"> at Öğrenci Baksana</span>
+              <span className="text-slate-300">Web Developer</span>
+              <span className="font-light"> at Milapasa</span>
             </h2>
           </div>
           <div className="flex items-end gap-2.5">
@@ -33,8 +33,8 @@ function MyInfo({ mobile }: { mobile?: boolean }) {
           Kerem Aydemir
         </h1>
         <h2 className="text-start text-xl font-medium text-base-content/90 !m-0">
-          <span className="text-slate-300">Frontend Developer</span>
-          <span className="font-light"> at Öğrenci Baksana</span>
+          <span className="text-slate-300">Web Developer</span>
+          <span className="font-light"> at Milapasa</span>
         </h2>
       </div>
     </>

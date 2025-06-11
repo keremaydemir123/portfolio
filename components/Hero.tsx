@@ -65,15 +65,6 @@ function Hero() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href={heroLinks.next.path}
-              className="link"
-            >
-              {heroLinks.next.name}
-            </a>
-            ,{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
               href={heroLinks.svelte.path}
               className="link"
             >
@@ -108,47 +99,46 @@ function Hero() {
             </a>
             , to expand my skills.
           </motion.p>
-          <motion.p variants={item} className="mb-4">
-            Right now, I&apos;m actively involved in the{" "}
+          {/* <motion.p variants={item} className="mb-4">
+            Right now, I&apos;m actively working for{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.ogrencibaksana.com/"
+              href="https://milapasa.com/"
               className="link"
             >
-              Öğrenci Baksana
+              Milapasa
             </a>{" "}
-            community on a voluntary basis.
-          </motion.p>
+          </motion.p> */}
           <motion.p variants={item} className="">
             I&apos;m currently learning{" "}
             <a
-              href={heroLinks.go.path}
+              href={heroLinks.odin.path}
               target="_blank"
               className="link"
               rel="noopener noreferrer"
             >
-              {heroLinks.go.name}
+              {heroLinks.odin.name}
             </a>
             ,{" "}
             <a
-              href={heroLinks.htmx.path}
+              href={heroLinks.lua.path}
               rel="noopener noreferrer"
               target="_blank"
               className="link"
             >
-              {heroLinks.htmx.name}
+              {heroLinks.lua.name}
             </a>{" "}
             and{" "}
             <a
-              href={heroLinks.mysql.path}
+              href={heroLinks.sdl3.path}
               rel="noopener noreferrer"
               target="_blank"
               className="link"
             >
-              {heroLinks.mysql.name}
-            </a>
-            .
+              {heroLinks.sdl3.name}
+            </a>{" "}
+            and working on a game project in my free time.
           </motion.p>
           <motion.p variants={item}>
             Feel free to explore my projects and don&apos;t hesitate to{" "}

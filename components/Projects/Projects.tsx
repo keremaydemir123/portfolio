@@ -10,9 +10,9 @@ import PageHeading from "../PageHeading";
 function Projects() {
   return (
     <div className="prose mb-12">
-      <PageHeading>Currently Working On</PageHeading>
+      {/* <PageHeading>Currently Working On</PageHeading> */}
 
-      <motion.div
+      {/* <motion.div
         variants={container}
         initial="hidden"
         whileInView="visible"
@@ -21,7 +21,7 @@ function Projects() {
         className="not-prose"
       >
         <CurrentProjectCard key="current-project" project={currentProject} />
-      </motion.div>
+      </motion.div> */}
 
       <PageHeading>Main Projects</PageHeading>
 

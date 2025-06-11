@@ -39,4 +39,16 @@ export const heroLinks = {
     name: "Astro",
     path: "https://astro.build/",
   },
+  lua: {
+    name: "Lua",
+    path: "https://www.lua.org/",
+  },
+  odin: {
+    name: "Odin",
+    path: "https://odin-lang.org/",
+  },
+  sdl3: {
+    name: "SDL3",
+    path: "https://wiki.libsdl.org/SDL3/FrontPage"
+  }
 };
